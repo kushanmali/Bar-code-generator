@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="JsBarcode.all.min.js"></script>
+</head>
+<body>
+
+ <div id="dis"><h1>bar code generate</h1>
+
+ <h3>enter your value</h3>
+
+ <p><input type="text" id="text-inp">
+<button type="submit" id="btn" onclick="document.getElementById('dis').style.display='none'">generate</button></p>
+
+</div>
+
+<svg id="barcode" ></svg>
+
+
+    <script>
+      document.getElementById("btn").addEventListener("click",function(){let val=document.getElementById("text-inp").value;
+      JsBarcode("#barcode",val);});
+     
+      
+    </script>
+    
+  
+
+    
+</body>
+</html>
